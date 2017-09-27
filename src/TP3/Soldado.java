@@ -11,9 +11,8 @@ public class Soldado extends Unidad{
 	private int energia;
 	
 	public Soldado() {
+		super(200,10);
 		this.energia = 100;
-		this.setSalud(200);
-		this.setDaño(10);
 	}
 
 	@Override
@@ -24,4 +23,5 @@ public class Soldado extends Unidad{
 		}
 		
 	}
+
 }

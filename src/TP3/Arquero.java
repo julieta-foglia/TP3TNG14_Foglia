@@ -11,16 +11,18 @@ public class Arquero extends Unidad{
 	private int flecha;
 	
 	public Arquero() {
+		super (50,5);
 		this.flecha = 20;
-		this.setSalud(50);
-		this.setDaño(5);
 	}
 
 	@Override
 	void atacar(Unidad unidad) {
-		// ver el tema de la distancia acá
-		
-		unidad.setSalud(unidad.getSalud() - this.getDaño());	//Daño que hace en la unidad que ataca
-
+		if( this.flecha > 0 )
+		{
+			// ver el tema de la distancia acá
+			unidad.setSalud(unidad.getSalud() - this.getDaño());
+			this.flecha--;
+			//Daño que hace en la unidad que ataca
+		}
 	}
 }

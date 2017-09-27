@@ -8,10 +8,11 @@ SALUD: 200
 */
 
 public class Caballero extends Unidad{
+	int cantAta;
 	
 	public Caballero() {
-		this.setSalud(200);
-		this.setDaño(50);
+		super(200,50);
+		cantAta = 0;
 	}
 
 	@Override
@@ -21,4 +22,5 @@ public class Caballero extends Unidad{
 		unidad.setSalud(unidad.getSalud() - this.getDaño());	//Daño que hace en la unidad que ataca
 
 	}
+
 }
