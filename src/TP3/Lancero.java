@@ -1,23 +1,37 @@
-package TP3;
+package warGame;
 
-/*LANCERO:
-ATAQUE: a una distancia de 1 a 3, sin condicion
-DAÑO: 25
-SALUD: 150
-*/
-
-public class Lancero extends Unidad{
+public class Lancero extends Unidad {
 	
+	/**
+	 * El lancero tiene una salud inicial y tope de
+	 * 150 y causa un danio de 25.
+	 */
+	private final static int SALUDTOPE = 150;
+	private final static int DANIO = 25;
+
 	public Lancero() {
-		this.setSalud(150);
-		this.setDaño(25);
+		this.moverA(0,0);
+		this.setSalud(SALUDTOPE);
+		this.setDanio(DANIO);
 	}
-
+	
+	public Lancero(int x,int y) {
+		this.moverA(x, y);
+		this.setSalud(SALUDTOPE);
+		this.setDanio(DANIO);
+	}
+	
+	/**
+	 * El lancero puede atacar si est� a una 
+	 * distancia entre 1 y 3 del oponente.
+	 * @param that Es la Unidad a la que pretende atacar
+	 * @return true si puede atacar, false si no puede
+	 */
 	@Override
-	void atacar(Unidad unidad) {
-		// ver el tema de la distancia acá
-		
-		unidad.setSalud(unidad.getSalud() - this.getDaño());	//Daño que hace en la unidad que ataca
-
+	protected boolean puedeAtacar(Unidad that) {
+		if(this.distanciaA(that)>=1 && this.distanciaA(that)<=3)
+			return true;
+		return false;
 	}
+
 }
