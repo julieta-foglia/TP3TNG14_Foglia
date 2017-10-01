@@ -1,20 +1,20 @@
-package warGame;
+package TP3;
 
 public class Soldado extends Unidad implements Bebedor {
 
 	/**
-	 * La energía que le queda a un soldado
+	 * La energia que le queda a un soldado
 	 */
 	private int energia;
 	
 	/**
-	 * El máximo de energía que puede tener.
+	 * El maximo de energia que puede tener.
 	 */
 	private int energiaTope;
 	
 	/**
-	 * Un soldado tiene, de inicial y tope, una energía de 100, una salud de 200 y hace un danio
-	 * de 10. Tener en cuenta que si se le asigna una capa se modificará la energía tope.
+	 * Un soldado tiene, de inicial y tope, una energia de 100, una salud de 200 y hace un daÃ±o
+	 * de 10. Tener en cuenta que si se le asigna una capa se modificara la energia tope.
 	 */
 	private static final int SALUDTOPE = 200;
 	private static final int DANIO = 10;
@@ -65,7 +65,7 @@ public class Soldado extends Unidad implements Bebedor {
 	
 	/**
 	 * Por implementar Bebedor.
-	 * tomarAgua() le da una poción de agua al soldado, que le restaura la energía.
+	 * tomarAgua() le da una pocion de agua al soldado, que le restaura la energia.
 	 */
 	@Override
 	public void tomarAgua() {
@@ -73,8 +73,8 @@ public class Soldado extends Unidad implements Bebedor {
 	}
 	
 	/**
-	 * Hacer daño le quita 10 puntos de energía
-	 * @return El daño realizado
+	 * Hacer daÃ±o le quita 10 puntos de energia
+	 * @return El daÃ±o realizado
 	 */
 	@Override
 	protected float hacerDanio() {
@@ -83,7 +83,7 @@ public class Soldado extends Unidad implements Bebedor {
 	}
 	
 	/**
-	 * Un soldado puede atacar si tiene por lo menos 10 de energía y está cuerpo a cuerpo contra el
+	 * Un soldado puede atacar si tiene por lo menos 10 de energia y esta cuerpo a cuerpo contra el
 	 * objetivo (distancia menor a 2)
 	 * @param that Es la Unidad a la que pretende atacar
 	 * @return true si puede atacar, false si no puede

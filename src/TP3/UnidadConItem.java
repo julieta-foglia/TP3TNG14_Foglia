@@ -1,18 +1,13 @@
-package warGame;
+package TP3;
 /**
  * Decorador
- * @author alexis
+ * @author grupo14
  * @param miUnidad Es la unidad a ser modificada
  */
-public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
+public abstract class UnidadConItem extends Unidad implements Bebedor, Tirador {
 
 	protected Unidad miUnidad;
-	/*Es una clase abstracta, no debería ser instanciable
-	public UnidadConItem(Unidad miUnidad){
-		super(0,0);
-	    this.miUnidad = miUnidad;
-	}*/
-	
+
 	public float getSalud() {
 		return miUnidad.getSalud();
 	}
@@ -34,9 +29,9 @@ public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
 	}
 	
 	/**
-	 * Se trata de el ataque en cuestion, que usaría el que desarrolle la batalla.
+	 * Se trata de el ataque en cuestion, que usaria el que desarrolle la batalla.
 	 * @param that Es la unidad a la que se ataca
-	 * @return true si logró atacar, false si no lo logró
+	 * @return true si logrï¿½ atacar, false si no lo logrï¿½
 	 */
 	public boolean atacar(Unidad that) {
 		if(this!=that)
@@ -54,16 +49,16 @@ public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
 	}
 	
 	/**
-	 * Calcula el daño que se entrega al enemigo
-	 * @return El daño en enteros
+	 * Calcula el daÃ±o que se entrega al enemigo
+	 * @return El daÃ±o en enteros
 	 */
 	protected float hacerDanio() {
 		return miUnidad.hacerDanio();
 	}
 	
 	/**
-	 * Calcula el daño final recibido por un ataque
-	 * @param danio Es el daño del enemigo
+	 * Calcula el daÃ±o final recibido por un ataque
+	 * @param danio Es el daÃ±o del enemigo
 	 */
 	protected void recibirDanio(float danio) {
 		miUnidad.recibirDanio(danio);
@@ -78,7 +73,6 @@ public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
 		return miUnidad.distanciaA(that);
 	}
 	
-	//Quiero pasar tomarAgua() a una interfaz Bebedor
 	/**
 	 * Ve los efectos de tomar agua, por defecto, ninguno
 	 */
@@ -88,8 +82,8 @@ public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
 	}
 	
 	public void cargarFlechas() {
-		if(miUnidad instanceof Shooter)
-			((Shooter) miUnidad).cargarFlechas();
+		if(miUnidad instanceof Tirador)
+			((Tirador) miUnidad).cargarFlechas();
 	}
 	
 	public int getEnergia() {
@@ -100,7 +94,7 @@ public abstract class UnidadConItem extends Unidad implements Bebedor, Shooter {
 	
 	/**
 	 * Nos avisa si nuestra Unidad sigue con vida
-	 * @return true si está vivo, false si está muerto
+	 * @return true si esta vivo, false si esta muerto
 	 */
 	public boolean estaVivo() {
 		return miUnidad.estaVivo();

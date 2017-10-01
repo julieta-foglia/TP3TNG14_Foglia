@@ -1,31 +1,23 @@
-package warGame;
+package TP3;
 
 /**
  * La unidad basica, representa a todas las unidades, incluida UnidadConItem
- * @author alexis
+ * @author grupo14
  * @param salud Es la salud actual de la unidad
- * @param danio Es el daño que hace la unidad en un ataque por defecto
+ * @param danio Es el daÃ±o que hace la unidad en un ataque por defecto
  * @param posicionX Es la posicion en X de la unidad
  * @param posicionY Es la posicion en Y de la unidad 
  */
 public abstract class Unidad {
 
-	//Vuelvo todas private y hago getters y setters (Vale)
 	private float salud;
 	private float danio;
 	private int posicionX;
 	private int posicionY;
 	
-	/*Es una clase abstracta, no debería tener constructor, no es instanciable... (Vale)
-	 * Hago moverA(x,y) que setea la posición.
-	public Unidad(int x,int y) {
-		this.posicionX=x;
-		this.posicionY=y;
-	}*/
-	
 	/**
 	 * Getters y setters para salud y danio
-	 * La salud y el danio se pueden ver públicamente, pero solo las clases hijas pueden setearlos
+	 * La salud y el daÃ±o se pueden ver publicamente, pero solo las clases hijas pueden setearlos
 	 */
 	public float getSalud() {
 		return this.salud;
@@ -44,7 +36,7 @@ public abstract class Unidad {
 	}
 	
 	/**
-	 * Mover a la unidad a la nueva posición con coordenadas X e Y	
+	 * Mover a la unidad a la nueva posicion con coordenadas X e Y	
 	 * @param x
 	 * @param y
 	 */
@@ -54,9 +46,9 @@ public abstract class Unidad {
 	}
 	
 	/**
-	 * Se trata de el ataque en cuestion, que usaría el que desarrolle la batalla.
+	 * Se trata del ataque en cuestion, que usaria el que desarrolle la batalla.
 	 * @param that Es la unidad a la que se ataca
-	 * @return true si logró atacar, false si no lo logró
+	 * @return true si logra atacar, false si no lo logra
 	 */
 	public boolean atacar(Unidad that) {
 		if(this!=that && this.estaVivo() && this.puedeAtacar(that)) {
@@ -74,16 +66,16 @@ public abstract class Unidad {
 	protected abstract boolean puedeAtacar(Unidad that);
 	
 	/**
-	 * Calcula el daño que se entrega al enemigo
-	 * @return El daño en enteros
+	 * Calcula el daÃ±o que se hace al enemigo
+	 * @return El daÃ±o en enteros
 	 */
 	protected float hacerDanio() {
 		return danio;
 	}
 	
 	/**
-	 * Calcula el daño final recibido por un ataque
-	 * @param danio Es el daño del enemigo
+	 * Calcula el daÃ±o final recibido por un ataque
+	 * @param danio Es el daÃ±o del enemigo
 	 */
 	protected void recibirDanio(float danio) {
 		this.salud-=danio;
@@ -100,24 +92,12 @@ public abstract class Unidad {
 	
 	/**
 	 * Nos avisa si nuestra Unidad sigue con vida
-	 * @return true si está vivo, false si está muerto
+	 * @return true si esta vivo, false si esta muerto
 	 */
 	public boolean estaVivo() {
 		if(this.salud>0)
 			return true;
 		return false;
 	}
-	/*                                 Idea: con estos, podemos hacer miUnidad = miUnidad.ponerAlgo();, si se implementa, hay que ver que hacer con Unidad con Item 
-	public Unidad ponerEscudo() {
-		return new UnidadConEscudo(this);
-	}
-	
-	public Unidad ponerCapa() {
-		return new UnidadConCapa(this);
-	}
-	
-	public Unidad ponerPunial() {
-		return new UnidadConPunial(this);
-	}
-	*/
+
 }

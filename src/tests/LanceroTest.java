@@ -1,11 +1,13 @@
-package warGame;
+package tests;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import TP3.Lancero;
+
 public class LanceroTest {
-	
+
 	Lancero jose;
 	Lancero ronaldo;
 	Lancero lejano;
@@ -29,8 +31,8 @@ public class LanceroTest {
 
 	/**
 	 * Test que muestra que ambos Lanceros
-	 * realizan 25 puntos de daño, sin items
-	 * y que reciben 25 puntos de daños,
+	 * realizan 25 puntos de daï¿½o, sin items
+	 * y que reciben 25 puntos de daï¿½os,
 	 * sin items
 	 */
 	@Test
@@ -92,5 +94,4 @@ public class LanceroTest {
 
 		Assert.assertEquals( false, jose.atacar(ronaldo));
 	}
-
 }

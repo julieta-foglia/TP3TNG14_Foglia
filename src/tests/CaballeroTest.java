@@ -1,11 +1,13 @@
-package warGame;
+package tests;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import TP3.Caballero;
+
 public class CaballeroTest {
-	
+
 	Caballero jose;
 	Caballero pepe;
 	Caballero lejano;
@@ -28,8 +30,8 @@ public class CaballeroTest {
 	
 	/**
 	 * Test que muestra que ambos Caballeros
-	 * realizan 50 puntos de daño, sin items
-	 * y que reciben 50 puntos de daños,
+	 * realizan 50 puntos de daï¿½o, sin items
+	 * y que reciben 50 puntos de daï¿½os,
 	 * sin items
 	 * Ademas, testeamos que ambos sigan vivos
 	 */
@@ -45,7 +47,7 @@ public class CaballeroTest {
 	/**
 	 * Test que muestra que, al quedar 
 	 * un Caballero con 0 puntos de
-	 * vida, este está muerto
+	 * vida, este estï¿½ muerto
 	 */
 	@Test
 	public void testeandoMuerte() {
@@ -112,6 +114,5 @@ public class CaballeroTest {
 		jose.tomarAgua();
 		Assert.assertEquals( true, jose.atacar(pepe));
 	}
-	
-	
+
 }

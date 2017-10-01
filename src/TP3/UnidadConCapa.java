@@ -1,4 +1,4 @@
-package warGame;
+package TP3;
 
 public class UnidadConCapa extends UnidadConItem {
 
@@ -15,8 +15,8 @@ public class UnidadConCapa extends UnidadConItem {
 	}
 	
 	/**
-	 * Calcula el daño que realiza miUnidad
-	 * @return En float el daño que envía la unidad, debilitado por la capa
+	 * Calcula el daÃ±o que realiza miUnidad
+	 * @return En float el daÃ±o que envia la unidad, debilitado por la capa
 	 */
 	@Override
 	protected float hacerDanio() {

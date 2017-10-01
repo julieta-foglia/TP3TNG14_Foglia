@@ -1,7 +1,7 @@
-package warGame;
+package TP3;
 /**
  * Decorador encargado del escudo
- * @author alexis
+ * @author grupo14
  * 
  */
 public class UnidadConEscudo extends UnidadConItem {
@@ -14,8 +14,8 @@ public class UnidadConEscudo extends UnidadConItem {
 	}
 	
 	/**
-	 * Modifica el daño recibido por culpa del escudo, al 40%
-	 * @param danio es el daño proveniente del enemigo
+	 * Modifica el daÃ±o recibido con escudo, al 40%
+	 * @param danio es el daÃ±o proveniente del enemigo
 	 */
 	@Override
 	public void recibirDanio(float danio) {

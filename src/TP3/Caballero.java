@@ -1,10 +1,10 @@
-package warGame;
+package TP3;
 
 public class Caballero extends Unidad implements Bebedor{
 
 	/**
-	 * Cuando recibe 3 ataques el caballo se asuta y se pone rebelde. Mientras esté rebelde el
-	 * caballero no podrá atacar. El caballo solo se calma con una poción de agua.
+	 * Cuando recibe 3 ataques el caballo se asuta y se pone rebelde. Mientras esta rebelde el
+	 * caballero no podra atacar. El caballo solo se calma con una pocion de agua.
 	 * El contador caballoNoRebelde empieza en 3 y se considera rebelde cuando llega a 0.
 	 */
 	private int caballoNoRebelde;
@@ -31,7 +31,7 @@ public class Caballero extends Unidad implements Bebedor{
 	
 	/**
 	 * Por implementar Bebedor
-	 * tomarAgua() le da una poción de agua al caballo y lo calma, lo saca del estado rebelde
+	 * tomarAgua() le da una pociï¿½n de agua al caballo y lo calma, lo saca del estado rebelde
 	 */
 	@Override
 	public void tomarAgua() {
@@ -39,8 +39,8 @@ public class Caballero extends Unidad implements Bebedor{
 	}
 	
 	/**
-	 * El caballero puede atacar si está a una distancia entre 1 y 2 del oponente y si su
-	 * caballo no está rebelde.
+	 * El caballero puede atacar si esta a una distancia entre 1 y 2 del oponente y si su
+	 * caballo no esta rebelde.
 	 * @param that Es la Unidad a la que pretende atacar
 	 * @return true si puede atacar, false si no puede
 	 */
@@ -52,8 +52,8 @@ public class Caballero extends Unidad implements Bebedor{
 	}
 	
 	/**
-	 * Calcula el daño final recibido por un ataque
-	 * @param danio Es el daño del enemigo
+	 * Calcula el daÃ±o final recibido por un ataque
+	 * @param daÃ±o Es el daÃ±o del enemigo
 	 */
 	protected void recibirDanio(float danio) {
 		this.setSalud(this.getSalud() - danio);

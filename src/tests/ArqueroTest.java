@@ -1,11 +1,13 @@
-package warGame;
+package tests;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import TP3.Arquero;
+
 public class ArqueroTest {
-	
+
 	Arquero oliver;
 	Arquero hawk;
 	Arquero legolas;
@@ -67,7 +69,7 @@ public class ArqueroTest {
 	}
 	
 	/**
-	 * Buscamos ver si mi arquero recibe daño
+	 * Buscamos ver si mi arquero recibe daï¿½o
 	 */
 	@Test
 	public void testeandoRecibirDanio() {
@@ -132,4 +134,5 @@ public class ArqueroTest {
 		Assert.assertEquals( false, oliver.estaVivo());
 		Assert.assertEquals( false, oliver.atacar(hawk));
 	}
+
 }

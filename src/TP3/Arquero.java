@@ -1,6 +1,6 @@
-package warGame;
+package TP3;
 
-public class Arquero extends Unidad implements Shooter{
+public class Arquero extends Unidad implements Tirador{
 
 	/**
 	 * La cantidad de flechas que posee el personaje.
@@ -8,13 +8,13 @@ public class Arquero extends Unidad implements Shooter{
 	private int flechas;
 
 	/**
-	 * Un Arquero tiene, de inicial y tope, una salud de 50 y hace un daño de 5.
+	 * Un Arquero tiene, de inicial y tope, una salud de 50 y hace un daï¿½o de 5.
 	 */
 	private static final int SALUDTOPE = 50;
 	private static final int DANIO = 5;
 	
 	/**
-	 * El constructor por defecto lo crea en la posición (0,0)
+	 * El constructor por defecto lo crea en la posicion (0,0)
 	 */
 	public Arquero() {
 		this.moverA(0, 0);
@@ -24,7 +24,7 @@ public class Arquero extends Unidad implements Shooter{
 	}
 	
 	/**
-	 * Este constructor crea un arquero en la posición especificada (x,y)
+	 * Este constructor crea un arquero en la posicion especificada (x,y)
 	 * @param x
 	 * @param y
 	 */
@@ -45,7 +45,7 @@ public class Arquero extends Unidad implements Shooter{
 	
 	/**
 	 * Al infringir danio, el arquero debe utilizar una flecha.
-	 * @return El daño realizado
+	 * @return El daÃ±o realizado
 	 */
 	@Override
 	protected float hacerDanio() {

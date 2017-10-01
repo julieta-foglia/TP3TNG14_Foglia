@@ -1,4 +1,4 @@
-package warGame;
+package TP3;
 
 public class UnidadConPunial extends UnidadConItem {
 
@@ -10,9 +10,9 @@ public class UnidadConPunial extends UnidadConItem {
 	}
 	
 	/**
-	 * El puñal reduce la defensa en 3 puntos, es decir, 
+	 * El puÃ±al reduce la defensa en 3 puntos, es decir, 
 	 * aumenta el ataque enemigo en 3 puntos
-	 * @param danio Es el daño base de la unidad
+	 * @param danio Es el daÃ±o base de la unidad
 	 */
 	@Override
 	public void recibirDanio(float danio) {
@@ -21,7 +21,7 @@ public class UnidadConPunial extends UnidadConItem {
 	
 	/**
 	 * El punial aumenta la fuerza de los ataques en 3 puntos
-	 * @return El daño final, sumado el +3 al daño
+	 * @return El daÃ±o final, sumado el +3 al daÃ±o
 	 */
 	@Override
 	protected float hacerDanio() {

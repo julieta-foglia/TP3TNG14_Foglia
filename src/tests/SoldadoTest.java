@@ -1,11 +1,13 @@
-package warGame;
+package tests;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import TP3.Soldado;
+
 public class SoldadoTest {
-	
+
 	Soldado jose;
 	Soldado ronaldo;
 	Soldado lejano;
@@ -73,7 +75,7 @@ public class SoldadoTest {
 	}
 	
 	/**
-	 * Buscamos ver si el Soldado recibe daño
+	 * Buscamos ver si el Soldado recibe daï¿½o
 	 */
 	@Test
 	public void testeandoRecibirDanio() {

@@ -2,14 +2,15 @@ package TP3;
 
 public abstract class Item {
 	protected String tipo;
-	protected double venefio;
+	protected double beneficio;
 	protected double perjucio;
 	protected String localizacion;
 	
-	public Item (String type,double ven, double per,String loc) {
+	public Item (String type, double ben, double per, String loc) {
 		tipo = type;
-		venefio = ven;
+		beneficio = ben;
 		perjucio = per;
 		localizacion = loc;
 	}
 }
+

@@ -1,4 +1,4 @@
-package warGame;
+package TP3;
 
 public class Lancero extends Unidad {
 	
@@ -22,7 +22,7 @@ public class Lancero extends Unidad {
 	}
 	
 	/**
-	 * El lancero puede atacar si está a una 
+	 * El lancero puede atacar si esta a una 
 	 * distancia entre 1 y 3 del oponente.
 	 * @param that Es la Unidad a la que pretende atacar
 	 * @return true si puede atacar, false si no puede
